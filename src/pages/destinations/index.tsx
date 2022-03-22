@@ -46,13 +46,13 @@ export default function Destination({destinations}:DestinationProps) {
                         <li className="active">
                             <a>moon</a>
                         </li>
-                        <li className="active">
+                        <li className="">
                             <a>mars</a>
                         </li>
-                        <li className="active">
+                        <li className="">
                             <a>europa</a>
                         </li>
-                        <li className="active">
+                        <li className="">
                             <a>titan</a>
                         </li>
                     </ul>
@@ -83,24 +83,24 @@ export default function Destination({destinations}:DestinationProps) {
     )
 }
 
-export const getStaticPaths: GetStaticPaths = async () => {
-    return {
-      paths: [],         
-      fallback: false
-    }
-}
+// export const getStaticPaths: GetStaticPaths = async () => {
+//     return {
+//       paths: [],         
+//       fallback: false
+//     }
+// }
   
-  export const getStaticProps: GetStaticProps = async ({ params }) => {
-    const {destination} = params
+//   export const getStaticProps: GetStaticProps = async ({ params }) => {
+//     const {destination} = params
 
-    // const response = await api.get(`/destinations?slug=${destination}`)
-    const response = await api.get(`/destinations?slug=${destination}`)
+//     // const response = await api.get(`/destinations?slug=${destination}`)
+//     const response = await api.get(`/destinations?slug=${destination}`)
 
-    const destinationInfos: DestinationType = response.data[0]
+//     const destinationInfos: DestinationType = response.data[0]
 
-    return {
-        props: {
-            destination: destinationInfos
-        }
-    }
-}
+//     return {
+//         props: {
+//             destination: destinationInfos
+//         }
+//     }
+// }
