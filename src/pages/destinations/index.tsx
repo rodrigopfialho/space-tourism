@@ -3,78 +3,62 @@ import {Container, Content, Planet, Info, Distance} from './styles'
 import { GetStaticPaths, GetStaticProps } from 'next';
 import {api} from "../../service/api"
 import { useEffect, useState } from "react";
+import Server from '../../../server.json'
 
 
 type DestinationType = {
-    id: number;
+    slug: string;
     name: string;
-    description: string;
-    distance: number;
-    travel: string;
-    images: [{
+    images: {
         png: string;
         webp: string;
-    }]
+    }
+    description: string;
+    distance: string;
+    travel: string;
 }
 
-interface DestinationProps {
-    destinations: DestinationType
-}
-
-export default function Destination({destinations}:DestinationProps) {
-    // const [destination, setDestination] = useState<DestinationProps>({} as DestinationProps)
+export default function Destination() {
+    const destinations: DestinationType[] = Server.destinations
+    const [destination, setDestination] = useState<DestinationType>({} as DestinationType)
+    const [slug, setSlug] = useState<string>('moon')
     
-    // useEffect(() => {
-    //     api.get('/destinations')
-    //         .then((response) => {
-    //             console.log(response)
-    //             setDestination(response.data)
-    //         })
-    // }, [])
+    useEffect(() => {
+        const value = destinations.find((item) => {
+            return item.slug === slug
+        })
+
+        setDestination(value)
+    }, [slug])
     
     return (
         <Container>
             <Header />
-            
             <Content>
                 <Planet>
                     <h4><span>01</span>PICK YOUR DESTINATION</h4>
-                    <img src="./assets/destination/image-moon.png" />
+                    <img src={destination.images?.png} />
                 </Planet>
                 <Info>
                     <ul>
-                        <li className="active">
-                            <a>moon</a>
-                        </li>
-                        <li className="">
-                            <a>mars</a>
-                        </li>
-                        <li className="">
-                            <a>europa</a>
-                        </li>
-                        <li className="">
-                            <a>titan</a>
-                        </li>
+                        {destinations.map(item => (
+                            <li className={item.slug === slug && 'active'}>
+                                <a onClick={() => setSlug(item.slug)}>{item.name}</a>
+                            </li>
+                        ))}
                     </ul>
-
-                    <h1>moon</h1>
-
+                    <h1>{destination.name}</h1>
                     <p>
-                        See our planet as you’ve never seen it 
-                        before. A perfect relaxing trip away to 
-                        help regain perspective and come back 
-                        refreshed. While you’re there, take in 
-                        some history by visiting the Luna 2 and
-                        Apollo 11 landing sites.
+                        {destination.description}
                     </p>
                     <Distance>
                         <div>
                             <span>AVG. DISTANCE</span>
-                            <h3>384,400 KM</h3>
+                            <h3>{destination.distance}</h3>
                         </div>
                         <div>
                             <span>EST. TRAVEL TIME</span>
-                            <h3>3 DAYS</h3>
+                            <h3>{destination.travel}</h3>
                         </div>
                     </Distance>
                 </Info>
