@@ -1,19 +1,29 @@
 import { Container, Content, Menu } from './styles'
 import { ActiveLink } from '../ActiveLink';
+import { useRef, useState } from 'react';
+import {FiAlignJustify, FiX } from 'react-icons/fi'
 
-export function Header() {
-    
+    export function Header() {
+    // const [buttonMenu, setButtonMenu] = useState(false)
+
+    function showNavBar() {
+       
+    }
+   
 
     return (
         <Container>
             <Content>
                 <img src="./logo.svg" alt="logo" />
 
-                <Menu className='nav'>
-                    <button className='btn-mobile'> 
-                        <span className='hamburguer'></span>
+                <Menu className='nav' >
+                    <button className='btnmobile' > 
+                        <span className='hamburguer'>
+                            <FiAlignJustify />
+                        </span>
                     </button>
                     <ul className='menu'>
+                        <FiX />
                         <ActiveLink activeClassName="active" href="/">
                             <li>
                                 <a>
