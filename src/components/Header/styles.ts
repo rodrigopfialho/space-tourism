@@ -11,6 +11,10 @@ export const Menu = styled.nav`
   backdrop-filter: blur(81.5485px);
   padding: 2rem 6rem 0 2rem;
 
+  button {
+    display: none;
+  }
+
   ul {
     display: flex;
     justify-content: space-around;
@@ -61,6 +65,39 @@ export const Menu = styled.nav`
       }
     }
   }
+
+  /* @media(max-width: 600px) {
+    .menu {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        height: 0px;
+        transition: .6s;
+        z-index: 1000;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu a{
+      padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+    }
+
+    .btn-mobile {
+      display: flex;
+        padding:  .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+    }
+
+  } */
 `;
 
 export const Content = styled.header`

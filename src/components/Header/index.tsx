@@ -2,13 +2,18 @@ import { Container, Content, Menu } from './styles'
 import { ActiveLink } from '../ActiveLink';
 
 export function Header() {
+    
+
     return (
         <Container>
             <Content>
                 <img src="./logo.svg" alt="logo" />
 
-                <Menu>
-                    <ul>
+                <Menu className='nav'>
+                    <button className='btn-mobile'> 
+                        <span className='hamburguer'></span>
+                    </button>
+                    <ul className='menu'>
                         <ActiveLink activeClassName="active" href="/">
                             <li>
                                 <a>
@@ -17,7 +22,7 @@ export function Header() {
                                 </a>
                             </li>
                         </ActiveLink>
-                        <ActiveLink activeClassName="active" href="/destinations">
+                        <ActiveLink activeClassName="active" href="/destination">
                             <li>
                                 <a>
                                     <span>01</span>
@@ -25,7 +30,7 @@ export function Header() {
                                 </a>
                             </li>
                         </ActiveLink>
-                        <ActiveLink activeClassName="active" href="">
+                        <ActiveLink activeClassName="active" href="/crew">
                             <li>
                                 <a>
                                     <span>02</span>
@@ -33,7 +38,7 @@ export function Header() {
                                 </a>
                             </li>
                         </ActiveLink>
-                        <ActiveLink activeClassName="active" href="">
+                        <ActiveLink activeClassName="active" href="/technology">
                             <li>
                                 <a>
                                     <span>03</span>

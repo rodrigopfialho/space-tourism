@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import { Header } from '../components/Header'
 import {Container, Main, Space, Explore} from '../styles/styleIndex'
 
@@ -23,9 +24,11 @@ export default function Home() {
           </p>
         </Space>
         <Explore>
+          <Link href="/destination">
           <button type="button">
             EXPLORE
           </button>
+          </Link>
         </Explore>
       </Main>
     </Container>

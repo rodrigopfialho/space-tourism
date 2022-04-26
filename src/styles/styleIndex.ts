@@ -37,7 +37,8 @@ export const Space = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 50%;    
+    width: 50%; 
+    
 
     h3 {
         font-family: Barlow Condensed;
@@ -68,22 +69,34 @@ export const Space = styled.div`
     }
 
     @media screen and (max-width: 768px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -8rem;
+
         h2 {
             font-family: 'Bellefair', serif;
             font-style: normal;
             font-weight: 400;
-            font-size: 8rem;
-            line-height: 11rem;
+            font-size: 7rem;
+            line-height: 9rem;
             color: var(--white);
         }
         h3 {
             font-family: Barlow Condensed;
             font-weight: 400;
             line-height: 2.1rem;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             letter-spacing: 4.725px;
             color: var(--white);
         
+        }
+
+        p {
+            width: 80%;
+            font-size: 1.3rem;
+            text-align: center;
         }
 
     }
@@ -110,6 +123,14 @@ export const Explore = styled.aside`
         cursor: pointer;
         border-radius: 50%;
         box-shadow: 2px 2px 10px 50px #979797;
+    }
+
+    @media screen and (max-width: 768px) {
+        button {
+            width: 11rem;
+            height: 11rem;
+            margin-top: -8rem;
+        }
     }
     
 `;
