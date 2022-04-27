@@ -4,11 +4,12 @@ import { useRef, useState } from 'react';
 import {FiAlignJustify, FiX } from 'react-icons/fi'
 
     export function Header() {
-    // const [buttonMenu, setButtonMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false)
 
-    function showNavBar() {
-       
-    }
+   const handleOpen = () => {
+        setOpenMenu(!openMenu)
+        console.log(openMenu)
+   }
    
 
     return (
@@ -16,14 +17,21 @@ import {FiAlignJustify, FiX } from 'react-icons/fi'
             <Content>
                 <img src="./logo.svg" alt="logo" />
 
-                <Menu className='nav' >
-                    <button className='btnmobile' > 
-                        <span className='hamburguer'>
-                            <FiAlignJustify />
-                        </span>
+                <Menu  >
+                    <button className='btnmobile'  onClick={handleOpen}> 
+                        {/* <span className='hamburguer'> */}
+                    
+                            {openMenu !== true ? 
+                                <FiAlignJustify /> : 
+                                ''
+                            }
+                            
+                        {/* </span> */}
                     </button>
-                    <ul className='menu'>
-                        <FiX />
+
+                    <ul className={openMenu !== true ? '' : 'open'}>  
+                    <FiX className={openMenu !== true ? 'close' : ''} onClick={handleOpen}/> 
+
                         <ActiveLink activeClassName="active" href="/">
                             <li>
                                 <a>

@@ -126,6 +126,7 @@ export const Explore = styled.aside`
     }
 
     @media screen and (max-width: 768px) {
+        margin-bottom: 10rem;
         button {
             width: 11rem;
             height: 11rem;

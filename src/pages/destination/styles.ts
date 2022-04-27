@@ -153,12 +153,13 @@ export const Info = styled.aside`
 `;
 
 export const Distance = styled.div`
-position: relative;
+    position: relative;
     padding-top: 1rem;
     border-top: 1px solid  #383B4B ;
     width: 80%; 
     display: flex;
     align-items: baseline;
+    margin-bottom: 7rem;
     div {
         span {
             font-family: 'Barlow Condensed';

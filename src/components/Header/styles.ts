@@ -7,23 +7,25 @@ export const Container = styled.div`
 `;
 
 export const Menu = styled.nav`
+
   button {
     display: none;
     width: 5rem;
-    height: 5rem;
+    /* height: 5rem; */
+    /* position: absolute; */
     background: transparent;
     border: 0;
     color: white;
     float: right;
     cursor: pointer;
     padding: 0;
+    margin-top: -270px;
 
-    span {
-      > svg {
+       svg {
         width: 80%;
         height:60%;
+
       }
-    }
   }
 
   ul {
@@ -40,7 +42,6 @@ export const Menu = styled.nav`
             top: 6rem;
             color: white;
             right: 2.5rem;
-            /* display: flex; */
             width: 30px;
             height: 30px;
             z-index: 1000;
@@ -101,17 +102,12 @@ export const Menu = styled.nav`
     button{
       display: flex;
       position: absolute;
-      height: 40%;
-      /* width: 90%; */
-      right: 10px;
+      height: 20%;
+      right: 10px;    
       
-
-      span {
-         svg {
+        svg {
           width: 50px;
-           
         }
-      }
     }
         display: flex;
         flex-direction: column;
@@ -124,10 +120,11 @@ export const Menu = styled.nav`
         z-index: 1000;
         padding: 0;
         margin: 0;
+        
 
-        span {
+        /* span {
           width: 50px;
-        }
+        } */
       
         ul {
           width: 100%;
@@ -136,41 +133,38 @@ export const Menu = styled.nav`
           flex-direction: column;
           justify-content: flex-start;
           align-items: flex-start;
+          /* transform: translate(-25px); */
+
+          &.open {
+            display: block;
+          }
+
+          &.clsoe {
+            display: none;
+          }
+
+          > svg {
+            display: block;
+          } 
+
 
           li:nth-child(2) {
             margin-left: 2.9rem;
           }
 
           li {
+            width: 100%;
             top: 9rem;
             margin-bottom: 1rem;
-
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
             &.active {
               border-bottom: 0;
             }
           }
 
-          > svg {
-            display: block;
-        }
         } 
-
-     /* .menu a{
-       padding: 1rem 0;
-        margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, .05);
-    } */
-
-    /* .btn-mobile {
-        display: flex;
-        padding:  .5rem 1rem;
-        font-size: 1rem;
-        border: none;
-        background: none;
-        cursor: pointer;
-        gap: .5rem;
-    } */
-
   }
 `;  
 
