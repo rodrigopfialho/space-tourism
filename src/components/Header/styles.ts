@@ -29,7 +29,7 @@ export const Menu = styled.nav`
   ul {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
     padding: 2rem 6rem 0 5rem;
@@ -96,7 +96,7 @@ export const Menu = styled.nav`
 
    @media (max-width: 649px) {
 
-    button{
+    button {
       display: flex;
       position: absolute;
       height: 20%;
@@ -110,7 +110,7 @@ export const Menu = styled.nav`
         flex-direction: column;
         align-items: flex-start;
         position: relative;
-        width: 50%;
+        width: 60%;
         height: 1000px;
         top: 180px;
         left: 0px;
@@ -122,9 +122,9 @@ export const Menu = styled.nav`
           width: 100%;
           height: 600px;
           display: none;
-          flex-direction: column;
+          /* flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-start;
+          align-items: flex-start; */
 
           &.open {
             display: block;
@@ -144,12 +144,13 @@ export const Menu = styled.nav`
           }
 
           li {
-            width: 100%;
+            width: 80%;
             top: 9rem;
+            left: -4rem;
             margin-bottom: 1rem;
-            display: flex;
+            /* display: flex;
             align-items: flex-start;
-            justify-content: flex-start;
+            justify-content: flex-start; */
             &.active {
               border-bottom: 0;
             }
