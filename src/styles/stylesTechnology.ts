@@ -1,4 +1,4 @@
-import { url } from "inspector";
+
 import styled from "styled-components";
 
 export const Container = styled.main`
@@ -47,7 +47,6 @@ export const Info = styled.section`
     width: 50%;
     display: flex;
     flex-direction: row;
-    /* justify-content: flex-end; */
 
     @media screen and (max-width: 800px) {
         width: 100%;
@@ -119,7 +118,6 @@ export const TextNavigation = styled.div`
     flex-direction: column;
     margin-top: 3.5rem;
     margin-left: 4rem;
-    /* justify-content: center; */
 
     h4 {
         font-weight: 400;
@@ -160,13 +158,6 @@ export const TextNavigation = styled.div`
     }
 
 `;
-
-// interface Props {
-//     images: {
-//         portrait: string,
-//         landscape: string
-//     }
-// }
 
 export const ImageAside = styled.aside`
     display: flex;

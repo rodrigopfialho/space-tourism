@@ -63,7 +63,6 @@ export const Details = styled.div`
 `;
 
 export const Info = styled.article`
-/* position: relative; */
     width: 100%;
     display: flex;
     flex-direction: column;

@@ -11,8 +11,6 @@ export const Menu = styled.nav`
   button {
     display: none;
     width: 5rem;
-    /* height: 5rem; */
-    /* position: absolute; */
     background: transparent;
     border: 0;
     color: white;
@@ -32,7 +30,6 @@ export const Menu = styled.nav`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* margin-right: 1rem; */
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(81.5485px);
     padding: 2rem 6rem 0 5rem;
@@ -120,11 +117,6 @@ export const Menu = styled.nav`
         z-index: 1000;
         padding: 0;
         margin: 0;
-        
-
-        /* span {
-          width: 50px;
-        } */
       
         ul {
           width: 100%;
@@ -133,7 +125,6 @@ export const Menu = styled.nav`
           flex-direction: column;
           justify-content: flex-start;
           align-items: flex-start;
-          /* transform: translate(-25px); */
 
           &.open {
             display: block;

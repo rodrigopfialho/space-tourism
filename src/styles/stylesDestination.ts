@@ -1,7 +1,6 @@
 import  styled  from 'styled-components';
 
 export const Container = styled.div`
-    /* position: relative; */
     width: 100vw;
     height: 100vh;
     background-size: 100% 100%;
@@ -17,7 +16,6 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.main`
-    /* padding-top: 1rem; */
     width: 100%;
     display: flex;
     align-items: baseline;

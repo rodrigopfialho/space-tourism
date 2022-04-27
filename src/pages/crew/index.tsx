@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header'
-import {Container, Content, Info, Details, Aside, Navigation} from './styles'
+import {Container, Content, Info, Details, Aside, Navigation} from '../../styles/stylesCrew'
 import Server from '../../../server.json'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -43,7 +43,7 @@ export default function Crew() {
                     <Navigation>
                         <ul>
                             {crew.map(item => (
-                                <li className={item.slug === slug && 'active'}>
+                                <li key={item.id}className={item.slug === slug && 'active'}>
                                     <a onClick={() => setSlug(item.slug)}>.</a>
                                 </li>
                             ))}

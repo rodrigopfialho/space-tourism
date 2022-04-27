@@ -1,5 +1,5 @@
 import { Header } from '../../components/Header'
-import {Container, Details, Info, Navigation, InfoSpace, TextNavigation, ImageAside} from './styles' 
+import {Container, Details, Info, Navigation, InfoSpace, TextNavigation, ImageAside} from '../../styles/stylesTechnology' 
 import Server from '../../../server.json'
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -39,7 +39,7 @@ export default function Tecnology() {
                     <Navigation>
                         <ul>
                             {technology.map(item => (
-                                <li 
+                                <li key={item.id}
                                     className={item.slug === slug && 'active'}
                                     onClick={() => setSlug(item.slug)}
                                 >

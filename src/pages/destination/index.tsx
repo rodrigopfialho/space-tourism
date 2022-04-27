@@ -1,5 +1,5 @@
 import { Header } from "../../components/Header";
-import {Container, Content, Planet, Info, Distance} from './styles'
+import {Container, Content, Planet, Info, Distance} from '../../styles/stylesDestination'
 import { useEffect, useState } from "react";
 import Server from '../../../server.json'
 
@@ -40,7 +40,7 @@ export default function Destination() {
                 <Info>
                     <ul>
                         {destinations.map(item => (
-                            <li className={item.slug === slug && 'active'}>
+                            <li key={item.slug} className={item.slug === slug && 'active'}>
                                 <a onClick={() => setSlug(item.slug)}>{item.name}</a>
                             </li>
                         ))}

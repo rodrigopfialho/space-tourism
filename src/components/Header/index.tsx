@@ -1,16 +1,16 @@
 import { Container, Content, Menu } from './styles'
 import { ActiveLink } from '../ActiveLink';
-import { useRef, useState } from 'react';
-import {FiAlignJustify, FiX } from 'react-icons/fi'
+import { useState } from 'react';
+import { FiAlignJustify, FiX } from 'react-icons/fi'
 
-    export function Header() {
+export function Header() {
     const [openMenu, setOpenMenu] = useState(false)
 
-   const handleOpen = () => {
+    const handleOpen = () => {
         setOpenMenu(!openMenu)
         console.log(openMenu)
-   }
-   
+    }
+
 
     return (
         <Container>
@@ -18,19 +18,15 @@ import {FiAlignJustify, FiX } from 'react-icons/fi'
                 <img src="./logo.svg" alt="logo" />
 
                 <Menu  >
-                    <button className='btnmobile'  onClick={handleOpen}> 
-                        {/* <span className='hamburguer'> */}
-                    
-                            {openMenu !== true ? 
-                                <FiAlignJustify /> : 
-                                ''
-                            }
-                            
-                        {/* </span> */}
+                    <button className='btnmobile' onClick={handleOpen}>
+                        {openMenu !== true ?
+                            <FiAlignJustify /> :
+                            ''
+                        }
                     </button>
 
-                    <ul className={openMenu !== true ? '' : 'open'}>  
-                    <FiX className={openMenu !== true ? 'close' : ''} onClick={handleOpen}/> 
+                    <ul className={openMenu !== true ? '' : 'open'}>
+                        <FiX className={openMenu !== true ? 'close' : ''} onClick={handleOpen} />
 
                         <ActiveLink activeClassName="active" href="/">
                             <li>
