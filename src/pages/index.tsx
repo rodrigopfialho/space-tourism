@@ -24,7 +24,7 @@ export default function Home() {
           </p>
         </Space>
         <Explore>
-          <Link href="/destination">
+          <Link href="/destination" passHref>
           <button type="button">
             EXPLORE
           </button>
